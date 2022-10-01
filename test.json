@@ -1,0 +1,40 @@
+{
+	"__sort": 100000,
+	"ksort": 60000,
+	"time1": 4,
+	"time2": 17,
+	"id": 60950530,
+	"root": 46057438,
+	"kindId": 1,
+	"subjectId": 50,
+	"subjectParentId": 3,
+	"name": "Сумки мужская сумка через плечо",
+	"brand": "End\u0026Start",
+	"brandId": 154530,
+	"siteBrandId": 164530,
+	"sale": 61,
+	"priceU": 250000,
+	"salePriceU": 97500,
+	"averagePrice": 83232,
+	"benefit": -17,
+	"pics": 9,
+	"rating": 5,
+	"feedbacks": 1001,
+	"colors": [
+		{
+			"name": "черный",
+			"id": 0
+		}
+	],
+	"sizes": [
+		{
+			"name": "",
+			"origName": "0",
+			"rank": 0,
+			"optionId": 108378365
+		}
+	],
+	"diffPrice": false,
+	"panelPromoId": 141224,
+	"promoTextCat": "ТОВАР НЕДЕЛИ"
+}
