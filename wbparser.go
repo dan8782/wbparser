@@ -1,48 +1,3 @@
-// package main
-
-// import (
-// 	//"fmt"
-// 	"log"
-// 	"github.com/PuerkitoBio/goquery"
-// 	"github.com/geziyor/geziyor"
-// 	"github.com/geziyor/geziyor/client"
-// 	//"github.com/geziyor/geziyor/export"
-// )
-
-// func main() {
-//     geziyor.NewGeziyor(&geziyor.Options{
-//         RobotsTxtDisabled: true,
-//         StartRequestsFunc: func(g *geziyor.Geziyor) {
-//             g.GetRendered("https://catalog.wb.ru/catalog/bags2/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&subject=50", g.Opt.ParseFunc)
-//         },
-//         ParseFunc: func(g *geziyor.Geziyor, r *client.Response) {
-//             r.HTMLDoc.Find("body").Each(func(_ int, s *goquery.Selection) {
-//                 log.Println(s.Find("div.wrapper").Text())
-//             })
-//             //fmt.Println(string(r.Body))
-//         },
-//         //BrowserEndpoint: "ws://localhost:50",
-//     }).Start()
-//     // geziyor.NewGeziyor(&geziyor.Options{
-//     //     RobotsTxtDisabled: true,
-//     //     StartURLs: []string{"https://www.wildberries.ru/catalog/aksessuary/sumki-i-ryukzaki/sumki"},
-//     //     ParseFunc: quotesParse,
-//     //     Exporters: []export.Exporter{&export.JSON{}},
-//     // }).Start()
-// }
-
-// // func quotesParse(g *geziyor.Geziyor, r *client.Response) {
-// //     fmt.Println(r.HTMLDoc.Find("body"))
-// //     r.HTMLDoc.Find("header__container").Each(func(i int, s *goquery.Selection) {
-// //         g.Exports <- map[string]interface{}{
-// //             "text":   s.Find("strong.brand-name").Text(),
-// //         }
-// //     })
-// //     if href, ok := r.HTMLDoc.Find("div.product-card-list").Attr("href"); ok {
-// //         g.Get(r.JoinURL(href), quotesParse)
-// //     }
-// // }
-
 package main
 
 import (
@@ -52,7 +7,7 @@ import (
 	"net/http"
 )
 
-type catalogs []struct {
+type Catalogs []struct {
 	ID      int    `json:"id"`
 	Name    string `json:"name"`
 	URL     string `json:"url"`
@@ -127,8 +82,6 @@ type Response struct {
 }
 
 func main(){
-
-
     page:="1"
     priceRange:="priceU=9700;100000&"
     url :="https://catalog.wb.ru/catalog/bags2/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page="+page+"&"+priceRange+"pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&subject=50"
@@ -155,11 +108,13 @@ func get_catalog(){
     }
     defer resp.Body.Close()
     body, err := ioutil.ReadAll(resp.Body)
-    var result catalogs
+    var result Catalogs
     if err := json.Unmarshal(body, &result); err != nil { 
         fmt.Println("Can not unmarshal JSON")
     }
-    _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result[0])), 0644)
+    _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result[10].URL)), 0644)
+    // catalogUrl:="https://catalog.wb.ru/catalog/"+result
+    //return catalogUrl
 }
 
 func PrettyPrint(i interface{}) string {
