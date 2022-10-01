@@ -52,6 +52,36 @@ import (
 	"net/http"
 )
 
+type catalogs []struct {
+	ID      int    `json:"id"`
+	Name    string `json:"name"`
+	URL     string `json:"url"`
+	Shard   string `json:"shard,omitempty"`
+	Query   string `json:"query,omitempty"`
+	Landing bool   `json:"landing,omitempty"`
+	Childs  []struct {
+		ID     int    `json:"id"`
+		Parent int    `json:"parent"`
+		Name   string `json:"name"`
+		Seo    string `json:"seo,omitempty"`
+		URL    string `json:"url"`
+		Shard  string `json:"shard"`
+		Query  string `json:"query"`
+		Childs []struct {
+			ID     int    `json:"id"`
+			Parent int    `json:"parent"`
+			Name   string `json:"name"`
+			URL    string `json:"url"`
+			Shard  string `json:"shard"`
+			Query  string `json:"query"`
+			Seo    string `json:"seo,omitempty"`
+		} `json:"childs,omitempty"`
+	} `json:"childs,omitempty"`
+	Seo        string `json:"seo,omitempty"`
+	IsDenyLink bool   `json:"isDenyLink,omitempty"`
+	Dest       []int  `json:"dest,omitempty"`
+}
+
 type Response struct {
 	State   int `json:"state"`
 	Version int `json:"version"`
@@ -97,6 +127,8 @@ type Response struct {
 }
 
 func main(){
+
+
     page:="1"
     priceRange:="priceU=9700;100000&"
     url :="https://catalog.wb.ru/catalog/bags2/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page="+page+"&"+priceRange+"pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&subject=50"
@@ -112,6 +144,22 @@ func main(){
     }
     //fmt.Println(PrettyPrint(result.Data.Products))
     _ = ioutil.WriteFile("test.json", []byte(PrettyPrint(result.Data.Products[0])), 0644)
+    get_catalog()
+}
+
+func get_catalog(){
+    url := "https://static.wbstatic.net/data/main-menu-ru-ru.json"
+    resp, err := http.Get(url)
+    if err != nil {
+        fmt.Println("No response from request")
+    }
+    defer resp.Body.Close()
+    body, err := ioutil.ReadAll(resp.Body)
+    var result catalogs
+    if err := json.Unmarshal(body, &result); err != nil { 
+        fmt.Println("Can not unmarshal JSON")
+    }
+    _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result[0])), 0644)
 }
 
 func PrettyPrint(i interface{}) string {
