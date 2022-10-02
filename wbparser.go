@@ -97,10 +97,11 @@ func main(){
     }
     //fmt.Println(PrettyPrint(result.Data.Products))
     _ = ioutil.WriteFile("test.json", []byte(PrettyPrint(result.Data.Products[0])), 0644)
-    get_catalog()
+    adress:=`"/catalog/aksessuary/sumki-i-ryukzaki.sumki"`
+    fmt.Println(get_catalog(adress))
 }
 
-func get_catalog(){
+func get_catalog(adress string) string{
     url := "https://static.wbstatic.net/data/main-menu-ru-ru.json"
     resp, err := http.Get(url)
     if err != nil {
@@ -112,9 +113,17 @@ func get_catalog(){
     if err := json.Unmarshal(body, &result); err != nil { 
         fmt.Println("Can not unmarshal JSON")
     }
-    _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result[10].URL)), 0644)
+    
+    for i := 0; i < len(result); i++ {
+        // pp:=PrettyPrint(result[i].Childs[i].URL)
+        fmt.Println(len(result[i].Childs))
+        // if adress==pp {
+        //     return "kek"
+        // }
+        _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result)), 0644)
+    }
     // catalogUrl:="https://catalog.wb.ru/catalog/"+result
-    //return catalogUrl
+    return "kuk"
 }
 
 func PrettyPrint(i interface{}) string {
