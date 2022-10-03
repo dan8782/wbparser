@@ -121,8 +121,8 @@ func get_catalog(adress string) string{
             if result[i].Childs[j].URL==adress {
                 Query:=result[i].Childs[j].Query
                 Shard:=result[i].Childs[j].Shard
-                catalogUrl:="https://catalog.wb.ru/catalog/"+Shard+ "/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&"+Query
-                fmt.Println(catalogUrl)
+                catalogUrl:="https://catalog.wb.ru/catalog/"+Shard+ "/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page=1&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&"+Query
+                return catalogUrl
             }
         }
     }
