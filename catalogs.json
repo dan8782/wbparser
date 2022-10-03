@@ -3201,7 +3201,7 @@
 				"seo": "Освещение для квартиры",
 				"url": "/catalog/dom/osveshchenie",
 				"shard": "housecraft",
-				"query": "subject=330;1133;1157;1158;1262;1263;1673;2420;2595;3488;3534;3548;4121;6355;6722",
+				"query": "subject=330;1133;1157;1158;1262;1263;1673;2420;2595;3488;3534;3548;4121;6355;6722;5876",
 				"childs": [
 					{
 						"id": 130193,
@@ -3210,6 +3210,14 @@
 						"url": "/catalog/dom/osveshchenie/abazhury",
 						"shard": "housecraft6",
 						"query": "subject=1262"
+					},
+					{
+						"id": 130483,
+						"parent": 60672,
+						"name": "Блоки питания для светильников",
+						"url": "/catalog/dom/osveshchenie/bloki-pitaniya-dlya-svetilnikov",
+						"shard": "housecraft6",
+						"query": "subject=5876"
 					},
 					{
 						"id": 130194,
@@ -8274,7 +8282,7 @@
 				"seo": "Товары для конного спорта",
 				"url": "/catalog/sport/konniy-sport",
 				"shard": "sport4",
-				"query": "subject=50;94;99;212;248;2021;3627;4703;4704;4705;4706;4707;4708;4709;4710;4711;4712;4713;4714;4715;4716;4717;4718;4719;4720;4886;4887;4888;5203;6223;6404;6405;6417;6583;6742;6815;6819;6821;6877;6878;7443;7545;7546;7547\u0026ext=209699;391178;9338280"
+				"query": "subject=50;94;99;212;248;2021;3627;4703;4704;4705;4706;4707;4708;4709;4710;4711;4712;4713;4714;4715;4716;4717;4718;4719;4720;4886;4887;4888;5203;6223;6404;6405;6417;6583;6742;6815;6819;6821;6877;6878;7443;7545;7546;7547;51\u0026ext=209699;391178;9338280"
 			},
 			{
 				"id": 10405,
@@ -11765,7 +11773,7 @@
 		"id": 4863,
 		"name": "Сад и дача",
 		"url": "/catalog/dachniy-sezon",
-		"shard": "garden",
+		"shard": "garden2",
 		"query": "subject=2240",
 		"landing": true,
 		"childs": [
@@ -11775,7 +11783,7 @@
 				"name": "Бассейны",
 				"seo": "Бассейны и средства для чистки",
 				"url": "/catalog/dachniy-sezon/basseyny",
-				"shard": "garden",
+				"shard": "garden2",
 				"query": "subject=413;415;416;419;470;472;473;483;487;1015;1417;1453;1454;1456;2529;3542;4219;4674;4675;5659;6034;6793;7036;7219;7234;7236",
 				"childs": [
 					{
@@ -11807,7 +11815,7 @@
 						"parent": 9038,
 						"name": "Надувные изделия и аксессуары для плавания",
 						"url": "/catalog/dom/dachniy-sezon/basseyny/naduvnye-izdeliya-i-aksessuary-dlya-plavaniya",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=413;415;416;419;470;472;473;487;2529"
 					},
 					{
@@ -12473,7 +12481,7 @@
 				"parent": 4863,
 				"name": "Садовый инструмент",
 				"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument",
-				"shard": "garden",
+				"shard": "garden2",
 				"query": "subject=1116;1194;1216;1219;1220;1221;1222;1223;1224;1226;1227;1228;1229;1231;1235;1236;1265;1280;1281;1283;1730;2225;2241;2350;2360;2422;2636;3135;3670;3686;3883;4032;4151;4339;4368;4396;5258;5457;5983;6328;6467;6468;6469;6495;6562;6720;6954;6955;7187;7188;7189;7190;7191;7192;7193;7194;7195;7196;7197;7198;7199;7211;7212;7228;7243;7244",
 				"childs": [
 					{
@@ -12481,7 +12489,7 @@
 						"parent": 128771,
 						"name": "Измерительный садовый инструмент",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/izmeritelniy-sadoviy-instrument",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1265"
 					},
 					{
@@ -12489,7 +12497,7 @@
 						"parent": 128771,
 						"name": "Инструмент для обработки почвы",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/instrument-dlya-obrabotki-pochvy",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1223;1224;1226;1280;1281;2241;2360;4339;6328;7187;7188;7189;7190;7196;7212"
 					},
 					{
@@ -12497,7 +12505,7 @@
 						"parent": 128771,
 						"name": "Инструмент для посадки и сбора урожая",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/instrument-dlya-posadki-i-sbora-urozhaya",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1221;1222;1235;3883;6562;7191"
 					},
 					{
@@ -12505,7 +12513,7 @@
 						"parent": 128771,
 						"name": "Инструмент для уборки в саду",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/instrument-dlya-uborki-v-sadu",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1231;4151;7192;7193;7194;7195"
 					},
 					{
@@ -12513,7 +12521,7 @@
 						"parent": 128771,
 						"name": "Инструменты для уборки снега и реагенты",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/instrumenty-dlya-uborki-snega-i-reagenty",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2350;4368;4396;5983;7243"
 					},
 					{
@@ -12521,7 +12529,7 @@
 						"parent": 128771,
 						"name": "Компостеры садовые",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/kompostery-sadovye",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=3135"
 					},
 					{
@@ -12529,7 +12537,7 @@
 						"parent": 128771,
 						"name": "Мелкий садовый инструмент",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/melkiy-sadoviy-instrument",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1194;1228;1229;7197;7244;7619"
 					},
 					{
@@ -12537,7 +12545,7 @@
 						"parent": 128771,
 						"name": "Садовые средства защиты",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/sadovye-sredstva-zashchity",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1116;2422;3670;7199"
 					},
 					{
@@ -12545,7 +12553,7 @@
 						"parent": 128771,
 						"name": "Садовый режущий инструмент",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/sadoviy-rezhushchiy-instrument",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1219;1220;1227;1236;1283;2225;2636;4032;6211;6955;7198;7211"
 					},
 					{
@@ -12553,7 +12561,7 @@
 						"parent": 128771,
 						"name": "Тачки и тележки садовые",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/tachki-i-telezhki-sadovye",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1216;5258;5457"
 					},
 					{
@@ -12561,7 +12569,7 @@
 						"parent": 128771,
 						"name": "Хранение садового инструмента",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/hranenie-sadovogo-instrumenta",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=6954;7228"
 					},
 					{
@@ -12569,7 +12577,7 @@
 						"parent": 128771,
 						"name": "Инструменты для пасечников",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-instrument/instrumenty-dlya-pasechnikov",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=3686;6467;6468;6469;6495;6720"
 					}
 				]
@@ -12579,7 +12587,7 @@
 				"parent": 4863,
 				"name": "Теплицы, парники, укрывной материал",
 				"url": "/catalog/dom/dachniy-sezon/teplitsy-parniki-ukryvnoy-material",
-				"shard": "garden",
+				"shard": "garden2",
 				"query": "subject=2351;2783;3592;3671;5219;5512;6883;7042;7200;7201;7202",
 				"childs": [
 					{
@@ -12587,7 +12595,7 @@
 						"parent": 128772,
 						"name": "Парники и аксессуары",
 						"url": "/catalog/dom/dachniy-sezon/teplitsy-parniki-ukryvnoy-material/parniki-i-aksessuary",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2351;7200;7201;7202"
 					},
 					{
@@ -12595,7 +12603,7 @@
 						"parent": 128772,
 						"name": "Сетки затеняющие",
 						"url": "/catalog/dom/dachniy-sezon/teplitsy-parniki-ukryvnoy-material/setki-zatenyayushchie",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=5219"
 					},
 					{
@@ -12603,7 +12611,7 @@
 						"parent": 128772,
 						"name": "Теплицы и аксессуары",
 						"url": "/catalog/dom/dachniy-sezon/teplitsy-parniki-ukryvnoy-material/teplitsy-i-aksessuary",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=3671;6883;7042"
 					},
 					{
@@ -12611,7 +12619,7 @@
 						"parent": 128772,
 						"name": "Укрывные материалы",
 						"url": "/catalog/dom/dachniy-sezon/teplitsy-parniki-ukryvnoy-material/ukryvnye-materialy",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2783;3592;5512"
 					}
 				]
@@ -12622,7 +12630,7 @@
 				"name": "Товары для бани и сауны",
 				"seo": "Товары для бани",
 				"url": "/catalog/dom-i-dacha/tovary-dlya-bani",
-				"shard": "garden",
+				"shard": "garden2",
 				"query": "subject=1002;1835;1838;1839;1840;1842;1843;1847;1848;1849;1869;1877;1878;2010;2093;2633;2634;3730;3735;4260;4332;4790;4791;4792;5960;6891;6892;6893;7207;7208;7209;7210;7533",
 				"childs": [
 					{
@@ -12630,7 +12638,7 @@
 						"parent": 8744,
 						"name": "Банный текстиль",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/banniy-tekstil",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1835;1838;1839;1869"
 					},
 					{
@@ -12638,7 +12646,7 @@
 						"parent": 8744,
 						"name": "Веники для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/veniki-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2010"
 					},
 					{
@@ -12646,7 +12654,7 @@
 						"parent": 8744,
 						"name": "Тапочки для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/tapochki-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1840"
 					},
 					{
@@ -12654,7 +12662,7 @@
 						"parent": 8744,
 						"name": "Банные массажеры",
 						"url": "/catalog/sad-i-dacha/tovary-dlya-bani-i-sauny/bannye-massazhery",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=6893"
 					},
 					{
@@ -12662,7 +12670,7 @@
 						"parent": 8744,
 						"name": "Наборы аксессуаров для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/nabory-aksessuarov-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1002"
 					},
 					{
@@ -12670,7 +12678,7 @@
 						"parent": 8744,
 						"name": "Масла, запарки и соль для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/masla-zaparki-i-sol-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1847;1848;2093;4260;4790;4791;4792"
 					},
 					{
@@ -12678,7 +12686,7 @@
 						"parent": 8744,
 						"name": "Бондарные изделия",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/bondarnye-izdeliya",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1842"
 					},
 					{
@@ -12686,7 +12694,7 @@
 						"parent": 8744,
 						"name": "Камни для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/kamni-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=4332"
 					},
 					{
@@ -12694,7 +12702,7 @@
 						"parent": 8744,
 						"name": "Окна для бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/okna-dlya-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=3735"
 					},
 					{
@@ -12702,7 +12710,7 @@
 						"parent": 8744,
 						"name": "Обустройство бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/obustroystvo-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1843;5960;7533;7658;7659"
 					},
 					{
@@ -12710,7 +12718,7 @@
 						"parent": 8744,
 						"name": "Предметы интерьера бани",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/predmety-interera-bani",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1849;7208;7209"
 					},
 					{
@@ -12718,7 +12726,7 @@
 						"parent": 8744,
 						"name": "Аксессуары для дров и золы",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/aksessuary-dlya-drov-i-zoly",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1877;1878;7210"
 					},
 					{
@@ -12726,7 +12734,7 @@
 						"parent": 8744,
 						"name": "Портативная паровая баня",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-bani/portativnaya-parovaya-banya",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=3730"
 					},
 					{
@@ -12734,7 +12742,7 @@
 						"parent": 8744,
 						"name": "Средства для ухода за баней и сауной",
 						"url": "/catalog/sad-i-dacha/tovary-dlya-bani-i-sauny/sredstva-dlya-uhoda-za-baney-i-saunoy",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2633;6892"
 					}
 				]
@@ -12744,7 +12752,7 @@
 				"parent": 4863,
 				"name": "Товары для кемпинга, пикника и отдыха",
 				"url": "/catalog/dom/dachniy-sezon/tovary-dlya-kempinga-piknika-i-otdyha",
-				"shard": "garden",
+				"shard": "garden2",
 				"query": "subject=326;498;586;740;929;1267;1416;1627;1831;3520;3851;5255;5506;5507;5509;6222;6905;7204;7229",
 				"childs": [
 					{
@@ -12752,7 +12760,7 @@
 						"parent": 128774,
 						"name": "Надувная мебель",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-kempinga-piknika-i-otdyha/naduvnaya-mebel",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1267;5506;5507;5509;7204;7229"
 					},
 					{
@@ -12760,7 +12768,7 @@
 						"parent": 128774,
 						"name": "Аксессуары для кемпинга",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-kempinga-piknika-i-otdyha/aksessuary-dlya-kempinga",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=326;498;929;3851;6222"
 					},
 					{
@@ -12768,7 +12776,7 @@
 						"parent": 128774,
 						"name": "Аксессуары для пикника",
 						"url": "/catalog/sad-i-dacha/tovary-dlya-kempinga-piknika-i-otdyha/aksessuary-dlya-piknika",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=586;740;1831;3520;6905"
 					},
 					{
@@ -12776,7 +12784,7 @@
 						"parent": 128774,
 						"name": "Аксессуары для отдыха",
 						"url": "/catalog/dom/dachniy-sezon/tovary-dlya-kempinga-piknika-i-otdyha/aksessuary-dlya-otdyha",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=1416;1627;5255"
 					},
 					{
@@ -12784,8 +12792,8 @@
 						"parent": 128774,
 						"name": "Посуда",
 						"url": "/catalog/dom-i-dacha/otdyh-na-prirode/posuda",
-						"shard": "",
-						"query": "",
+						"shard": "garden2",
+						"query": "subject=1590;1833\u0026ext=65818;65819",
 						"seo": "Посуда для отдыха на природе"
 					}
 				]
@@ -12795,7 +12803,7 @@
 				"parent": 4863,
 				"name": "Удобрения, химикаты и средства защиты",
 				"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity",
-				"shard": "garden",
+				"shard": "garden3",
 				"query": "subject=701;1370;1541;1584;1725;1968;2236;2357;2597;2674;4078;6221;6421;6894;6895;7203;7205;7206;7245;7246",
 				"childs": [
 					{
@@ -12803,7 +12811,7 @@
 						"parent": 128773,
 						"name": "Побелка садовая",
 						"url": "/catalog/sad-i-dacha/udobreniya-himikaty-i-sredstva-zashchity/pobelka-sadovaya",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=6895"
 					},
 					{
@@ -12811,7 +12819,7 @@
 						"parent": 128773,
 						"name": "Средства от сорняков",
 						"url": "/catalog/sad-i-dacha/udobreniya-himikaty-i-sredstva-zashchity/sredstva-ot-sornyakov",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=6894"
 					},
 					{
@@ -12819,7 +12827,7 @@
 						"parent": 128773,
 						"name": "Средства для борьбы с грызунами",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/sredstva-dlya-borby-s-gryzunami",
-						"shard": "garden",
+						"shard": "garden2",
 						"query": "subject=2357"
 					},
 					{
@@ -12827,7 +12835,7 @@
 						"parent": 128773,
 						"name": "Средства для ускорения компостизации",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/sredstva-dlya-uskoreniya-kompostizatsii",
-						"shard": "garden",
+						"shard": "garden3",
 						"query": "subject=6221;6421;7203"
 					},
 					{
@@ -12835,7 +12843,7 @@
 						"parent": 128773,
 						"name": "Средства защиты растений",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/sredstva-zashchity-rasteniy",
-						"shard": "garden",
+						"shard": "garden3",
 						"query": "subject=4078"
 					},
 					{
@@ -12843,7 +12851,7 @@
 						"parent": 128773,
 						"name": "Средства от комаров и бытовых насекомых",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/sredstva-ot-komarov-i-bytovyh-nasekomyh",
-						"shard": "garden",
+						"shard": "garden3",
 						"query": "subject=701;1370;1541;1584;2236;2597;2674"
 					},
 					{
@@ -12851,7 +12859,7 @@
 						"parent": 128773,
 						"name": "Стимуляторы и регуляторы роста",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/stimulyatory-i-regulyatory-rosta",
-						"shard": "garden",
+						"shard": "garden3",
 						"query": "subject=1725;1968;7205;7206"
 					},
 					{
@@ -12859,7 +12867,7 @@
 						"parent": 128773,
 						"name": "Удобрения для растений",
 						"url": "/catalog/dom/dachniy-sezon/udobreniya-himikaty-i-sredstva-zashchity/udobreniya-dlya-rasteniy",
-						"shard": "garden",
+						"shard": "garden3",
 						"query": "subject=2356;7245;7246"
 					}
 				]

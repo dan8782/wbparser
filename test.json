@@ -12,14 +12,14 @@
 	"brand": "End\u0026Start",
 	"brandId": 154530,
 	"siteBrandId": 164530,
-	"sale": 61,
+	"sale": 63,
 	"priceU": 250000,
-	"salePriceU": 97500,
-	"averagePrice": 83232,
-	"benefit": -17,
+	"salePriceU": 92500,
+	"averagePrice": 79628,
+	"benefit": -16,
 	"pics": 9,
 	"rating": 5,
-	"feedbacks": 1001,
+	"feedbacks": 1005,
 	"colors": [
 		{
 			"name": "черный",
@@ -35,6 +35,6 @@
 		}
 	],
 	"diffPrice": false,
-	"panelPromoId": 141224,
-	"promoTextCat": "ТОВАР НЕДЕЛИ"
+	"panelPromoId": 141584,
+	"promoTextCat": "PRE SALE"
 }
