@@ -84,7 +84,8 @@ type Response struct {
 }
 
 func main() {
-	adress := "/catalog/zhenshchinam/odezhda/bryuki-i-shorty"
+	var adress string
+	fmt.Scanf("%s",&adress)
 	fmt.Println(get_catalog(adress))
 }
 
@@ -117,29 +118,33 @@ func get_catalog(adress string) string {
 
 	for i := 0; i < len(result); i++ {
 		fmt.Println(len(result[i].Childs))
-		_ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result)), 0644)
+		//_ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result)), 0644)
 		for j := 0; j < len(result[i].Childs); j++ {
 			if result[i].Childs[j].URL == adress {
 				var catalogUrl string
 				Query := result[i].Childs[j].Query
 				Shard := result[i].Childs[j].Shard
-				for page := 1; page < 99; page++ {
+				for page := 1; page < 101; page++ {
 					pagei:= strconv.Itoa(page)
 					catalogUrl = "https://catalog.wb.ru/catalog/" + Shard + "/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page="+pagei+"&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&" + Query
 					wf(catalogUrl)
-					pageint,err:=strconv.Atoi(pagei)
-					if err != nil {
-						fmt.Println("strconv error")
-						panic(err)
-					}
+					pageint:=strtoint(pagei)
 					parse(catalogUrl, pageint)
 				}
 				return catalogUrl
 			}
 		}
 	}
-
 	return "I cant find this adress"
+}
+
+func strtoint(nr string) int{
+	r,err:=strconv.Atoi(nr)
+	if err != nil {
+		fmt.Println("strconv error")
+		panic(err)
+	}
+	return r;
 }
 
 func parse(url string,page int){
