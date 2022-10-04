@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 type Catalogs []struct {
@@ -81,56 +82,72 @@ type Response struct {
 	} `json:"data"`
 }
 
-func main(){
-    page:="1"
-    priceRange:="priceU=9700;100000&"
-    url :="https://catalog.wb.ru/catalog/bags2/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page="+page+"&"+priceRange+"pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&subject=50"
-    resp, err := http.Get(url)
-    if err != nil {
-        fmt.Println("No response from request")
-    }
-    defer resp.Body.Close()
-    body, err := ioutil.ReadAll(resp.Body)
-    var result Response
-    if err := json.Unmarshal(body, &result); err != nil { 
-        fmt.Println("Can not unmarshal JSON")
-    }
-    //fmt.Println(PrettyPrint(result.Data.Products))
-    _ = ioutil.WriteFile("test.json", []byte(PrettyPrint(result.Data.Products[0])), 0644)
-    adress:="/catalog/zhenshchinam/odezhda/bryuki-i-shorty"
-    fmt.Println(get_catalog(adress))
+func main() {
+	page := "1"
+	priceRange := "priceU=9700;100000&"
+	url := "https://catalog.wb.ru/catalog/bags2/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page=" + page + "&" + priceRange + "pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&subject=50"
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println("No response from request")
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	var result Response
+	if err := json.Unmarshal(body, &result); err != nil {
+		fmt.Println("Can not unmarshal JSON")
+	}
+	//fmt.Println(PrettyPrint(result.Data.Products))
+	_ = ioutil.WriteFile("test.json", []byte(PrettyPrint(result.Data.Products[0])), 0644)
+	adress := "/catalog/zhenshchinam/odezhda/bryuki-i-shorty"
+	fmt.Println(get_catalog(adress))
 }
 
-func get_catalog(adress string) string{
-    url := "https://static.wbstatic.net/data/main-menu-ru-ru.json"
-    resp, err := http.Get(url)
-    if err != nil {
-        fmt.Println("No response from request")
-    }
-    defer resp.Body.Close()
-    body, err := ioutil.ReadAll(resp.Body)
-    var result Catalogs
-    if err := json.Unmarshal(body, &result); err != nil { 
-        fmt.Println("Can not unmarshal JSON")
-    }
+func wf(text string) int{
+	f, err := os.OpenFile("names.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
+	if err != nil {
+		panic(err)
+	}
 
-    for i := 0; i < len(result); i++ {
-        fmt.Println(len(result[i].Childs))
-        _ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result)), 0644)
-        for j := 0; j < len(result[i].Childs); j++ {
-            if result[i].Childs[j].URL==adress {
-                Query:=result[i].Childs[j].Query
-                Shard:=result[i].Childs[j].Shard
-                catalogUrl:="https://catalog.wb.ru/catalog/"+Shard+ "/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page=1&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&"+Query
-                return catalogUrl
-            }
-        }
-    }
-    
-    return "kuk"
+	defer f.Close()
+
+	if _, err = f.WriteString(text+"\n"); err != nil {
+		panic(err)
+	}
+	return 0;
+}
+
+func get_catalog(adress string) string {
+	url := "https://static.wbstatic.net/data/main-menu-ru-ru.json"
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Println("No response from request")
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	var result Catalogs
+	if err := json.Unmarshal(body, &result); err != nil {
+		fmt.Println("Can not unmarshal JSON")
+	}
+
+	for i := 0; i < len(result); i++ {
+		fmt.Println(len(result[i].Childs))
+		_ = ioutil.WriteFile("catalogs.json", []byte(PrettyPrint(result)), 0644)
+		for j := 0; j < len(result[i].Childs); j++ {
+			if result[i].Childs[j].URL == adress {
+				Query := result[i].Childs[j].Query
+				Shard := result[i].Childs[j].Shard
+				catalogUrl := "https://catalog.wb.ru/catalog/" + Shard + "/catalog?appType=1&couponsGeo=12,3,18,15,21,101&curr=rub&dest=-1029256,-51490,-184106,123585599&emp=0&lang=ru&locale=ru&page=1&pricemarginCoeff=1.0&reg=0&regions=68,64,83,4,38,80,33,70,82,86,75,30,69,1,48,22,66,31,40,71&sort=popular&spp=0&" + Query
+				wf(catalogUrl)
+				wf(catalogUrl+"123")
+				return catalogUrl
+			}
+		}
+	}
+
+	return "kuk"
 }
 
 func PrettyPrint(i interface{}) string {
-    s, _ := json.MarshalIndent(i, "", "\t")
-    return string(s)
+	s, _ := json.MarshalIndent(i, "", "\t")
+	return string(s)
 }

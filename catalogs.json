@@ -403,7 +403,7 @@
 				"seo": "Товары для беременных и кормящих мам",
 				"url": "/catalog/budushchie-mamy",
 				"shard": "moms",
-				"query": "kind=2\u0026subject=11;38;41;50;69;70;71;74;75;76;92;131;148;149;151;153;155;156;157;158;161;165;166;168;170;171;172;173;174;177;180;185;193;197;209;213;214;215;216;217;218;219;225;252;254;282;284;285;289;313;319;320;322;336;369;394;409;605;743;853;1045;1076;1128;1160;1183;1321;1340;1429;1431;1591;1629;1630;1631;1633;1635;1641;1687;1695;1724;1791;1935;2048;2110;2230;2239;2404;2535;2544;2600;2622;2649;3835;4315;4367;4377;5268;5269;5270;5271;5446\u0026ext=31144;78636;78637;79529;79530;79531;79593;173662;195658",
+				"query": "subject=11;38;41;50;69;70;71;74;75;76;92;131;148;149;151;153;155;156;157;158;161;165;166;168;170;171;172;173;174;177;180;185;193;197;209;213;214;215;216;217;218;219;225;252;254;282;284;285;289;313;319;320;322;336;369;394;409;605;743;853;1045;1076;1128;1160;1183;1321;1340;1429;1431;1591;1629;1630;1631;1633;1635;1641;1687;1695;1724;1791;1935;2048;2110;2230;2239;2404;2535;2544;2600;2622;2649;3835;4315;4367;4377;5268;5269;5270;5271;5446\u0026ext=31144;78636;78637;79529;79530;79531;79593;173662;195658",
 				"childs": [
 					{
 						"id": 350,
@@ -993,7 +993,7 @@
 						"name": "Канцелярия и книги",
 						"url": "/catalog/zhenshchinam/podarki-zhenshchinam/kantselyariya-i-knigi",
 						"shard": "gift5",
-						"query": "subject=334;381;469;661;662;744;758;1001;1046;1191;1446;6359;720\u0026ext=66595;66852;66854;66856;90221"
+						"query": "subject=334;381;469;661;662;744;758;1001;1046;1191;1446;6359;720\u0026ext=66595;66852;66854;66856;538625"
 					},
 					{
 						"id": 129182,
@@ -1086,7 +1086,7 @@
 				"seo": "Детская обувь",
 				"url": "/catalog/obuv/detskaya",
 				"shard": "children-test",
-				"query": "kind=5;6;3\u0026subject=108;33;93;343;94;337;749;1025;104;105;1664;2772;95;109;2956;97;283;98;103;99;1658;396;232;2771;106;2400;100;101;391;107;238",
+				"query": "kind=3;5;6\u0026subject=2;108",
 				"childs": [
 					{
 						"id": 631,
@@ -2639,7 +2639,7 @@
 						"name": "Декоративная посуда",
 						"url": "/catalog/dom/kuhnya/dekorativnaya-posuda",
 						"shard": "kitchen5",
-						"query": "subject=199;812;817;821;825;828;848;873;877;881;882;1018;1021;1041;1205;1273;1494;1506;1802;3104;3528;1476;876;831;1019;1832;822;1512;824;816;1830;832;2144;998\u0026ext=211727"
+						"query": "subject=199;704;812;817;821;825;828;848;873;877;881;882;997;1018;1021;1041;1205;1273;1296;1494;1506;1768;1802;3104;3528\u0026ext=211727"
 					},
 					{
 						"id": 8702,
@@ -5176,7 +5176,7 @@
 						"name": "Стекла и пленки",
 						"url": "/catalog/elektronika/smartfony-i-telefony/stekla-i-plenki",
 						"shard": "electronic3",
-						"query": "subject=453;1571;2559;2761;6912",
+						"query": "subject=453;1571;2559;2761;6912\u0026ext=171985;171995",
 						"seo": "Стекла и пленки для смартфона"
 					},
 					{
@@ -9593,7 +9593,7 @@
 				"name": "Художественная литература",
 				"url": "/catalog/knigi/hudozhestvennaya-literatura",
 				"shard": "books_fiction",
-				"query": "subject=381;4961;5805\u0026ext=69439;69444;69449;69455;69457;69459;69473;69479;69487;70848;155767;205607",
+				"query": "subject=381;4961;5805;7770\u0026ext=69439;69444;69449;69455;69457;69459;69473;69479;69487;70848;155767;205607",
 				"childs": [
 					{
 						"id": 9215,
@@ -9601,7 +9601,7 @@
 						"name": "Проза",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/proza",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69459",
+						"query": "subject=381;7770\u0026ext=69459",
 						"seo": "Книги в жанре проза"
 					},
 					{
@@ -9610,7 +9610,7 @@
 						"name": "Детективы",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/detektivy",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69439"
+						"query": "subject=381;7770\u0026ext=69439"
 					},
 					{
 						"id": 9170,
@@ -9618,7 +9618,7 @@
 						"name": "Фантастика и фэнтези",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/fantastika-i-fentezi",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69473"
+						"query": "subject=381;7770\u0026ext=69473"
 					},
 					{
 						"id": 9168,
@@ -9626,7 +9626,7 @@
 						"name": "Любовные романы",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/lyubovnye-romany",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69449"
+						"query": "subject=381;7770\u0026ext=69449"
 					},
 					{
 						"id": 16159,
@@ -9634,7 +9634,7 @@
 						"name": "Приключенческая литература",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/priklyuchencheskaya-literatura",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69457"
+						"query": "subject=381;7770\u0026ext=69457"
 					},
 					{
 						"id": 60739,
@@ -9642,7 +9642,7 @@
 						"name": "Исторические романы",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/istoricheskie-romany",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=205607"
+						"query": "subject=381;7770\u0026ext=205607"
 					},
 					{
 						"id": 58396,
@@ -9650,7 +9650,7 @@
 						"name": "Триллеры",
 						"url": "/catalog/knigi/nehudozhestvennaya-literatura/trillery",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=155767",
+						"query": "subject=381;7770\u0026ext=155767",
 						"seo": "Книги в жанре триллеры"
 					},
 					{
@@ -9659,7 +9659,7 @@
 						"name": "Афоризмы, фольклор и мифы",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/aforizmy-folklor-mify",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69487"
+						"query": "subject=381;7770\u0026ext=69487"
 					},
 					{
 						"id": 9169,
@@ -9667,7 +9667,7 @@
 						"name": "Поэзия",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/poeziya",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69455"
+						"query": "subject=381;7770\u0026ext=69455"
 					},
 					{
 						"id": 9171,
@@ -9675,7 +9675,7 @@
 						"name": "Юмор и сатира",
 						"url": "/catalog/knigi/hudozhestvennaya-literatura/yumor-i-satira",
 						"shard": "books_fiction",
-						"query": "subject=381\u0026ext=69479"
+						"query": "subject=381;7770\u0026ext=69479"
 					}
 				]
 			},
@@ -9685,7 +9685,7 @@
 				"name": "Комиксы и манга",
 				"url": "/catalog/knigi/hudozhestvennaya-literatura/komiksy-i-manga",
 				"shard": "books_fiction",
-				"query": "subject=381;4961\u0026ext=70848"
+				"query": "subject=381;4961;7770\u0026ext=70848"
 			},
 			{
 				"id": 9110,
@@ -10137,7 +10137,7 @@
 				"name": "Красота, здоровье и спорт",
 				"url": "/catalog/knigi/krasota-zdorove-i-sport",
 				"shard": "books",
-				"query": "subject=381\u0026ext=69446;69450;69469;69478;388611",
+				"query": "subject=381;7770\u0026ext=69446;69450;69469;69478;388611",
 				"childs": [
 					{
 						"id": 9133,
@@ -10180,7 +10180,7 @@
 						"name": "Сексология и эротика",
 						"url": "/catalog/knigi/nehudozhestvennaya-literatura/erotika",
 						"shard": "books",
-						"query": "subject=381\u0026ext=69478",
+						"query": "subject=381;7770\u0026ext=69478",
 						"seo": "Книги в жанре эротика"
 					}
 				]
@@ -10326,7 +10326,7 @@
 				"seo": "Книги по философии",
 				"url": "/catalog/knigi/nehudozhestvennaya-literatura/filosofiya",
 				"shard": "books",
-				"query": "subject=381\u0026ext=79194"
+				"query": "subject=381;7770\u0026ext=79194"
 			},
 			{
 				"id": 9148,
@@ -12424,7 +12424,7 @@
 						"name": "Ограды и бордюры для клумб и газонов",
 						"url": "/catalog/dom/dachniy-sezon/sadoviy-dekor/ogrady-i-bordyury-dlya-klumb-i-gazonov",
 						"shard": "garden1",
-						"query": "subject=3827;1195;4985;4988;5793;7173;7174;7242;7026"
+						"query": "subject=1195;3827;4985;4988;5793;7173;7174;7242"
 					},
 					{
 						"id": 128802,
@@ -12880,7 +12880,7 @@
 		"name": "Здоровье",
 		"url": "/catalog/dom-i-dacha/zdorove",
 		"shard": "shealth1",
-		"query": "subject=5222",
+		"query": "subject=438;440;477;556;557;596;636;637;665;1311;1583;1610;1628;1862;2028;2475;2494;2652;2653;2786;2787;2826;2843;2909;3066;3067;3492;3585;3628;3700;3859;3914;4049;4051;4056;4120;4177;4229;4268;4479;4556;4683;4928;5055;5189;5220;5222;5264;5339;5389;5399;5400;5401;5649;5674;5802;6157;6234;6629;6735;6736;6737;6738",
 		"landing": true,
 		"childs": [
 			{
