@@ -154,7 +154,7 @@ func parse(url string,page int){
 		fmt.Println("Can not unmarshal JSON")
 	}
 	for i := 0; i < 99; i++ {
-		wf(result.Data.Products[i].Name)
+		wf(result.Data.Products[i].Brand)
 	}
 }
 
